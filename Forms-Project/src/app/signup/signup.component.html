@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="content">
+        <form action="" class="form-controls" [formGroup]="signUp" (ngSubmit)="submit()">
+            <div class="heading">SIGN-UP</div>
+            <div class="username control">
+                <input type="text" placeholder="FIRSTNAME" class="names" formControlName="firstname">
+                <input type="text" placeholder="LASTNAME" class="names" formControlName="lastname">
+            </div>
+            <div class="email control">
+                <input type="text" placeholder="E-MAIL" class="email-input" formControlName="email">
+            </div>
+            <div class="password control">
+                <input type="text" placeholder="PASSWORD" class="pass" formControlName="password">
+                <input type="text" placeholder="CONFIRM PASSWORD" class="pass" formControlName="confirm">
+            </div>
+            <div class="place control">
+                <select name="places" id="place" class="state" formControlName="state">
+                    <option value="#">Select State:</option>
+                    <option *ngFor="let i of places">{{i}}</option>
+                    
+                </select>
+                
+            </div>
+            <div class="gender control">
+                <div class="gender-value">Gender :</div>
+                <div class="gender-value rb-value">
+                    <div class="gen"><input type="radio" name="gender" formControlName="male" > Male </div>
+                    <div class="gen"><input type="radio" name="gender" formControlName="female"> Female </div>
+                    <div class="gen"><input type="radio" name="gender" formControlName="others"> Others </div>
+                </div>
+            </div>
+            <div class="phone control">
+                <input type="text" placeholder="PHONE" class="email-input" formControlName="phone">
+            </div>
+            <div class="agree control">
+                <input type="checkbox" name="" id="" formControlName="agree"> I agree to the terms and conditions and privacy policy.
+            </div>
+            <div class="button control">
+                <button class="signup-btn" type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</div>
